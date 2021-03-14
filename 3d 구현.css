@@ -1,0 +1,96 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.Square {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  top: 100px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotate3d(0, 0, 0, 0);
+          transform: rotate3d(0, 0, 0, 0);
+  -webkit-animation: rotation 5s linear infinite;
+          animation: rotation 5s linear infinite;
+}
+
+.Square div {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  text-align: center;
+  line-height: 100px;
+  border: 1px solid #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.Square .front {
+  -webkit-transform: translate3d(0, 0, 100px);
+          transform: translate3d(0, 0, 100px);
+}
+
+.Square .bottom {
+  -webkit-transform: translate3d(0, 50px, 50px) rotateX(-90deg);
+          transform: translate3d(0, 50px, 50px) rotateX(-90deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.Square .top {
+  -webkit-transform: translate3d(0, -50px, 50px) rotateX(90deg);
+          transform: translate3d(0, -50px, 50px) rotateX(90deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.Square .back {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.Square .left {
+  -webkit-transform: translate3d(-50px, 0, 50px) rotateY(90deg);
+          transform: translate3d(-50px, 0, 50px) rotateY(90deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.Square .right {
+  -webkit-transform: translate3d(50px, 0, 50px) rotateY(90deg);
+          transform: translate3d(50px, 0, 50px) rotateY(90deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotatex(0) rotateY(0);
+            transform: rotatex(0) rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotatex(360deg) rotateY(360deg);
+            transform: rotatex(360deg) rotateY(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotatex(0) rotateY(0);
+            transform: rotatex(0) rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotatex(360deg) rotateY(360deg);
+            transform: rotatex(360deg) rotateY(360deg);
+  }
+}
+/*# sourceMappingURL=3d 구현.css.map */
